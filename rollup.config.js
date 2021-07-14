@@ -10,6 +10,7 @@ const config = {
   output: {
     file: path.resolve(__dirname, 'dist', 'index.js'),
     format: 'cjs',
+    banner: '#!/usr/bin/env node',
   },
   plugins: [rollupTypescript(), uglify()],
   external: ['download-git-repo', 'fs', 'path', 'ora', 'inquirer', 'commander'],

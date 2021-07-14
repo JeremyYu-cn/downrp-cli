@@ -8,10 +8,10 @@
     "typescript": "^4.3.5"
   },
   "bin": {
-    "downrp": "node ./dist/index.js"
+    "downrp": "./dist/index.js"
   },
   "name": "downrp-cli",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "main": "index.js",
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.2.1",
