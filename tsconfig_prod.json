@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",                               
+      "module": "ESNext",             
+      "strict": true,           
+      "moduleResolution": "node",                  
+      "baseUrl": "./",                             
+      "paths": {
+        "@/*": [ "./src/*" ]
+      }, 
+      "esModuleInterop": true,                        
+      "skipLibCheck": true,                           
+      "forceConsistentCasingInFileNames": true        
+    }
+  }
+  

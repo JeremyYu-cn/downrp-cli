@@ -1,4 +1,4 @@
 export default {
-  'test-kit':
-    'direct:https://bitbucket.org/JeremyYu_1122/testtemplate/get/master.zip',
+  'taro-react-kit-2.x':
+    'direct:https://bitbucket.org/JeremyYu_1122/taro-react-kit-2.x/get/master.zip',
 };

@@ -12,7 +12,12 @@ const config = {
     format: 'cjs',
     banner: '#!/usr/bin/env node',
   },
-  plugins: [rollupTypescript(), uglify()],
+  plugins: [
+    rollupTypescript({
+      tsconfig: path.resolve(__dirname, './tsconfig_prod.json'),
+    }),
+    uglify(),
+  ],
   external: ['download-git-repo', 'fs', 'path', 'ora', 'inquirer', 'commander'],
 };
 export default config;

@@ -8,18 +8,15 @@ export function downloadTemplate(options: IPromptOption): Promise<boolean> {
     const CURRENT_PATH = process.cwd();
     const { projectName, templateName, repositoryUrl } = options;
     const targetPath = path.resolve(CURRENT_PATH, projectName);
-
-    download(
-      repositoryUrl || (<Record<string, any>>RepositoryList)[templateName],
-      targetPath,
-      {},
-      (err) => {
-        if (err) {
-          console.log(err);
-          resolve(false);
-        }
-        resolve(true);
+    const rpUrl = repositoryUrl
+      ? `direct:${repositoryUrl}`
+      : (<Record<string, any>>RepositoryList)[templateName];
+    download(rpUrl, targetPath, {}, (err) => {
+      if (err) {
+        console.log(err);
+        resolve(false);
       }
-    );
+      resolve(true);
+    });
   });
 }
