@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "@types/node": "^16.3.1",
+    "commander": "^8.0.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^8.1.1",
+    "ora": "^5.4.1",
+    "typescript": "^4.3.5"
+  },
+  "bin": {
+    "temp-cli": "node ./dist/index.js"
+  },
+  "name": "temp-cli",
+  "version": "0.0.1",
+  "main": "index.js",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/inquirer": "^7.3.3",
+    "rollup": "^2.53.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-node": "^10.1.0",
+    "tsconfig-paths": "^3.10.1"
+  },
+  "scripts": {
+    "dev": "ts-node -r tsconfig-paths/register --files ./src/index.ts",
+    "build": "rollup --config rollup.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IchliebedichZhu/temp-cli"
+  },
+  "keywords": [
+    "get template",
+    "cli",
+    "javascript"
+  ],
+  "author": "Jeremy Yu",
+  "license": "MIT",
+  "description": ""
+}
