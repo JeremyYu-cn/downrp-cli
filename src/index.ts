@@ -15,6 +15,5 @@ function entry() {
   });
 }
 
-// commander
 createCommand();
 entry();
