@@ -24,8 +24,8 @@ yarn
 
 ## use
 
-```javascript
-downrp;
+```
+    downrp
 ```
 
 ## download custom repository
@@ -36,3 +36,14 @@ then write you repository url
 ## download private repository
 
 you can download your private custom project on this kit, choose **private** repository type and input your git username and password, then the kit will download it！
+
+# save your repository to local storage
+
+## use
+
+```
+    downrp-save
+```
+
+use save repository instruction that you can write your repository information to local strage.
+when you write success, you can find it in the `choose template`

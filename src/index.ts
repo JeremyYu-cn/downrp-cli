@@ -15,5 +15,5 @@ function entry() {
   });
 }
 
-createCommand();
+const cmd = createCommand();
 entry();

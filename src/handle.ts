@@ -2,11 +2,12 @@
  * Title: 处理prompt选择后的方法
  * Author: Jeremy Yu
  * Date: 2021-07-13
- * Update:
+ * Update: 2021-07-21
  */
 
 import { downloadTemplate, privateClone } from './downloadTemplate';
-import { IPromptOption } from './assets/inquirer';
+import { IPromptOption, ISafeListOption } from './assets/inquirer';
+import { saveLocalRepository } from '@/local';
 import path from 'path';
 import ora from 'ora';
 
@@ -45,5 +46,34 @@ export async function handlePromptMethod<T extends IPromptOption>(
   } catch (err) {
     console.log(err);
     newOra.fail('download fail');
+  }
+}
+
+export async function handleSafeRepository<T extends ISafeListOption>(
+  param: T
+) {
+  const newOra = ora('start download template').start();
+  try {
+    const {
+      templateName,
+      repositoryType,
+      repositoryPass,
+      repositoryUser,
+      repositoryUrl,
+    } = param;
+    const isPrivacy = repositoryType === 'private';
+    const saveResult = saveLocalRepository(
+      templateName,
+      repositoryUrl,
+      isPrivacy,
+      repositoryUser,
+      repositoryPass
+    );
+    (await saveResult)
+      ? newOra.succeed('save template success')
+      : newOra.fail('save fail');
+  } catch (err) {
+    console.log(err);
+    newOra.fail('save fail');
   }
 }

@@ -12,10 +12,10 @@
   },
   "bin": {
     "downrp": "./dist/index.js",
-    "downrp-newpage": ""
+    "downrp-save": "./dist/save.js"
   },
   "name": "downrp-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "./dist/index.js",
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.2.1",
@@ -28,6 +28,7 @@
   },
   "scripts": {
     "dev": "ts-node -r tsconfig-paths/register --files ./src/index.ts",
+    "dev:save": "ts-node -r tsconfig-paths/register --files ./src/localEntry.ts",
     "dev:cmd": "ts-node -r tsconfig-paths/register --files ./src/command.ts",
     "dev:pri": "ts-node -r tsconfig-paths/register --files ./src/downloadTemplate/privateClone.ts",
     "build": "rollup --config rollup.config.js",
