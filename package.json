@@ -15,7 +15,7 @@
     "downrp-save": "./dist/save.js"
   },
   "name": "downrp-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/index.js",
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.2.1",
